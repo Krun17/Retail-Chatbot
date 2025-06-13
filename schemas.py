@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from typing import List, Optional
 
 class KPIQuery(BaseModel):
-    user_query: str                                      # ✅ Add this line
+    user_query: str                                      
     mentioned_kpis: List[str] = Field(default_factory=list)
     mtd_mode: Optional[str] = "no"
     start_date: Optional[str] = None
